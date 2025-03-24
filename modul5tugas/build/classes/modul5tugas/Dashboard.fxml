@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modul5tugas.DashboardController">
+   <left>
+      <AnchorPane prefHeight="768.0" prefWidth="300.0" style="-fx-background-color: #0548F4;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="69.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../tugas/Modul3Contoh2/src/asset/img/logo_white.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="35.0" layoutY="259.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="209.0" text="Dasboard">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="35.0" layoutY="320.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="216.0" text="Peminjaman">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="37.0" layoutY="397.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="215.0" text="Pengembalian">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="36.0" layoutY="466.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="215.0" text="Perpanjangan">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="39.0" layoutY="537.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="208.0" text="Pengecekan">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="69.0" layoutY="177.0" prefHeight="40.0" prefWidth="191.0" text="pustakalokal" textFill="#cee423">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnMasterData" layoutX="39.0" layoutY="596.0" mnemonicParsing="false" onAction="#handleButtonMasterAction" prefHeight="38.0" prefWidth="208.0" text="Master Data">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="768.0" prefWidth="724.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="69.0" layoutY="35.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonLogout" layoutX="630.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #0548F4;" text="Log Out" textFill="#f2ebeb">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="69.0" layoutY="93.0" prefHeight="35.0" prefWidth="275.0" text="Selamat datang Admin !" textFill="#0044ff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

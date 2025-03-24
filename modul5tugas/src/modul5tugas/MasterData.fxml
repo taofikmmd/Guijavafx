@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modul5tugas.MasterDataController">
+   <left>
+      <AnchorPane prefHeight="768.0" prefWidth="300.0" style="-fx-background-color: #0548F4;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="69.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../tugas/Modul3Contoh2/src/asset/img/logo_white.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="44.0" layoutY="259.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="209.0" text="Dasboard">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="43.0" layoutY="320.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="216.0" text="Peminjaman">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="43.0" layoutY="383.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="215.0" text="Pengembalian">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="45.0" layoutY="444.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="215.0" text="Perpanjangan">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="46.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="215.0" text="Pengecekan">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="69.0" layoutY="177.0" prefHeight="40.0" prefWidth="191.0" text="pustakalokal" textFill="#cee423">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnMasterData" layoutX="46.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleButtonMasterAction" prefHeight="38.0" prefWidth="215.0" text="Master Data">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="768.0" prefWidth="724.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="69.0" layoutY="35.0" text="Master Data">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonLogout" layoutX="630.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleButtonMasterAction" style="-fx-background-color: #0548F4;" text="Log Out" textFill="#f2ebeb">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TabPane layoutX="64.0" layoutY="114.0" prefHeight="604.0" prefWidth="615.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Anggota">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Nama" />
+                              <TextField fx:id="txtNamaAgt" layoutX="66.0" layoutY="10.0" prefHeight="25.0" prefWidth="389.0" />
+                              <Label layoutX="16.0" layoutY="49.0" text="Jenis" />
+                              <RadioButton fx:id="radio1" layoutX="66.0" layoutY="49.0" mnemonicParsing="false" text="Mahasiswa">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Jenis" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="radio2" layoutX="159.0" layoutY="49.0" mnemonicParsing="false" text="Dosen" toggleGroup="$Jenis" />
+                              <RadioButton fx:id="radio3" layoutX="227.0" layoutY="49.0" mnemonicParsing="false" text="Staff" toggleGroup="$Jenis" />
+                              <Label layoutX="15.0" layoutY="91.0" text="Alamat" />
+                              <Label layoutX="16.0" layoutY="144.0" text="Telepon" />
+                              <Label layoutX="15.0" layoutY="188.0" text="Tanggal Daftar" />
+                              <TextField fx:id="txtAlamat" layoutX="85.0" layoutY="87.0" prefHeight="25.0" prefWidth="207.0" />
+                              <TextField fx:id="txtTelepon" layoutX="85.0" layoutY="140.0" prefHeight="25.0" prefWidth="206.0" />
+                              <DatePicker fx:id="tglDaftar" layoutX="102.0" layoutY="184.0" prefHeight="25.0" prefWidth="191.0" />
+                              <Label layoutX="318.0" layoutY="49.0" text="Jenis Kelamin" />
+                              <Label layoutX="322.0" layoutY="91.0" text="Kota" />
+                              <Label layoutX="320.0" layoutY="144.0" text="Email" />
+                              <Label layoutX="318.0" layoutY="197.0" text="Organisasi" />
+                              <RadioButton fx:id="jkl" layoutX="405.0" layoutY="49.0" mnemonicParsing="false" text="Laki-laki">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="jk" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="jkp" layoutX="492.0" layoutY="49.0" mnemonicParsing="false" text="Perempuan" toggleGroup="$jk" />
+                              <TextField fx:id="txtEmail" layoutX="396.0" layoutY="140.0" />
+                              <ComboBox fx:id="cbxKota" layoutX="395.0" layoutY="87.0" prefWidth="150.0" />
+                              <ComboBox fx:id="cbxOrg" layoutX="396.0" layoutY="185.0" prefWidth="150.0" />
+                              <Button fx:id="btnAddAgt" layoutX="168.0" layoutY="243.0" mnemonicParsing="false" onAction="#addAnggota" text="Add" />
+                              <Button fx:id="btnUpAgt" layoutX="247.0" layoutY="243.0" mnemonicParsing="false" text="Update" />
+                              <Button fx:id="btnDelAgt" layoutX="348.0" layoutY="243.0" mnemonicParsing="false" text="Delete" />
+                              <TableView fx:id="tblAggt" layoutX="12.0" layoutY="312.0" prefHeight="257.0" prefWidth="591.0">
+                                <columns>
+                                  <TableColumn fx:id="collIdAgt" prefWidth="75.0" text="id" />
+                                  <TableColumn fx:id="collNamaAgt" prefWidth="203.0" text="nama" />
+                                    <TableColumn fx:id="collJenisAgt" prefWidth="133.0" text="jenis" />
+                                    <TableColumn fx:id="collOrgAgt" prefWidth="179.0" text="organisasi" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Kota">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="508.0" prefWidth="615.0">
+                           <children>
+                              <Label layoutX="100.0" layoutY="60.0" text="Nama">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <TextField fx:id="txtNamaKota" layoutX="154.0" layoutY="58.0" onAction="#addKota" prefHeight="25.0" prefWidth="309.0" />
+                              <Button fx:id="btnAddKot" layoutX="171.0" layoutY="102.0" mnemonicParsing="false" onAction="#addKota" text="Add" />
+                              <Button fx:id="btnUpKot" layoutX="271.0" layoutY="102.0" mnemonicParsing="false" onAction="#updateKota" text="Update" />
+                              <Button fx:id="btnDelKot" layoutX="368.0" layoutY="102.0" mnemonicParsing="false" onAction="#deleteKota" text="Delete" />
+                              <TableView fx:id="tblKota" layoutX="33.0" layoutY="163.0" onSort="#addKota" prefHeight="276.0" prefWidth="551.0">
+                                 <columns>
+                                    <TableColumn fx:id="colId" prefWidth="63.0" text="Id" />
+                                    <TableColumn fx:id="collKota" prefWidth="487.0" text="Kota" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Organisasi">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="19.0" text="Nama" />
+                              <TextField fx:id="txtOrganisasi" layoutX="87.0" layoutY="18.0" prefHeight="25.0" prefWidth="464.0" />
+                              <Label layoutX="26.0" layoutY="72.0" text="Jenis" />
+                              <RadioButton fx:id="radioOrFak" layoutX="99.0" layoutY="68.0" mnemonicParsing="false" text="Fakultas">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="groupOrganisasi" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="radioOrPro" layoutX="169.0" layoutY="68.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="55.0" text="Prodi" toggleGroup="$groupOrganisasi" />
+                              <RadioButton fx:id="radioOrUn" layoutX="224.0" layoutY="68.0" mnemonicParsing="false" text="Unit" toggleGroup="$groupOrganisasi" />
+                              <Button fx:id="btnAddOr" layoutX="131.0" layoutY="159.0" mnemonicParsing="false" onAction="#addOrganisasi" text="Add" />
+                              <Button fx:id="btnUpOr" layoutX="218.0" layoutY="159.0" mnemonicParsing="false" onAction="#updateOrganisasi" text="Update" />
+                              <Button fx:id="btnDelOr" layoutX="326.0" layoutY="159.0" mnemonicParsing="false" onAction="#deleteOrganisasi" text="Delete" />
+                              <TableView fx:id="tblOrganisasi" layoutX="56.0" layoutY="288.0" prefHeight="200.0" prefWidth="450.0">
+                                <columns>
+                                  <TableColumn fx:id="collIdOr" prefWidth="75.0" text="Id" />
+                                  <TableColumn fx:id="collNamaOr" prefWidth="266.0" text="Nama" />
+                                    <TableColumn fx:id="collJenisOr" prefWidth="108.0" text="Jenis" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="75.0" text="C1" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
